@@ -6,6 +6,10 @@
     <uses-feature android:name="android.hardware.location.gps" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+
 
     <application
         android:name=".App"
@@ -24,8 +28,7 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-
-
+        <service android:name=".ServicioLocalizacion"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
